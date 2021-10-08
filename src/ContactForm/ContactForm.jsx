@@ -49,6 +49,7 @@ class ContactForm extends Component {
               required
               onChange={this.handleChange}
               value={this.state.name}
+              placeholder="Add name"
             />
           </label>
           <label>
@@ -61,6 +62,7 @@ class ContactForm extends Component {
               required
               onChange={this.handleChange}
               value={this.state.number}
+              placeholder="Add phone"
             />
           </label>
 
