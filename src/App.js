@@ -14,6 +14,7 @@ class App extends Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
+    
   };
 
   formSubmitHandler = data => {
@@ -63,6 +64,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Phonebook</h1>
+        <p>by Veles</p>
         <ContactForm onSubmitData={this.formSubmitHandler} />
         <h1>Contacts</h1>
         <Filter setFilterToState={this.setFilterToState} />

@@ -36,11 +36,12 @@ class ContactForm extends Component {
   };
   render() {
     return (
+      
       <div className={style.contactform}>
-        <form type="submit" onSubmit={this.handleSubmit}>
+        <form className={style.form} type="submit" onSubmit={this.handleSubmit}>
           <label>
-            Name
-            <input
+            Name  :
+            <input className={style.inputname} 
               type="text"
               name="name"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -51,8 +52,8 @@ class ContactForm extends Component {
             />
           </label>
           <label>
-            Number
-            <input
+            Number  :
+            <input className={style.inputname}
               type="tel"
               name="number"
               pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
@@ -63,9 +64,10 @@ class ContactForm extends Component {
             />
           </label>
 
-          <button type="submit">Add contact</button>
+          <button className={style.btn} type="submit">Add contact</button>
         </form>
       </div>
+    
     );
   }
 }

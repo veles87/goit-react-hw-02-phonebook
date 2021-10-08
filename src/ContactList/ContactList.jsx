@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
+import './ContactList.css';
+
 
 class ContactList extends Component {
   deleteId = Id => {
@@ -11,13 +13,15 @@ class ContactList extends Component {
       return (
         <li key={uuidv4()} id={contact.id}>
           {`${contact.name}: ${contact.number}`}
-          <button
+          <button  
             data-id={contact.id}
             onClick={() => this.deleteId(contact.id)}
           >
             Delete
           </button>
+          
         </li>
+        
       );
     });
   };
